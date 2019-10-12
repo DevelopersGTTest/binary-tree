@@ -23,16 +23,13 @@
       <input id="inD" class="form-control"  type="text" placeholder="Raiz" />
      <input id="inH" class="form-control" type="text"   placeholder="Nodo" />
       <input type="submit" class="btn btn-success btn-lg btn-block" value="Aplicar">
-      <div class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active">
-          <input class="form-control" type="radio" name="options" id="option1" autocomplete="off" checked> Pre-Orden
-        </label>
-        <label class="btn btn-secondary">
-          <input class="form-control"  type="radio" name="options" id="option2" autocomplete="off"> In-Orden
-        </label>
-        <label class="btn btn-secondary">
-          <input class="form-control" type="radio" name="options" id="option3" autocomplete="off"> Post-Orden
-        </label>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Tipo de Evaluación</label>
+        <select class="form-control" id="exampleFormControlSelect1" onchange="eval()" >
+          <option value="pre" > Pre-Orden</option>
+          <option value="inn" >In-Orden</option>
+          <option value="pos" >Post-Orden</option>
+        </select>
       </div>
     </form>
   </section>
@@ -44,6 +41,28 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+<script>
+  function eval(){
+    let v = document.getElementById("exampleFormControlSelect1").value;
+    console.log(v)
+    if( v =='pre'){
+      setTimeout( ()=>{
+        alert('Recorrido por Pre-Orden')
+      },260)
+    }
+    if( v == 'inn'){
+      setTimeout( ()=>{
+        alert('Recorrido por In-Orden')
+      }, 217)
+    }
+    if( v == 'pos'){
+      setTimeout( ()=>{
+        alert('Recorrido por Post-Orden')
+      },13)
+    }
+  }
+</script>
+
 <script src="./js/main.js"></script>  
 
 </html>
