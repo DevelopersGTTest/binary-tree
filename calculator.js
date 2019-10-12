@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 app.post('/pre/orden', (req, res)=>{
-
+    result = []
 
    var nodo1 = new Nodo(`${req.body.elements[0].nodo1}`)
    var nodo2 = new Nodo(`${req.body.elements[1].nodo2}`)
@@ -19,6 +19,8 @@ app.post('/pre/orden', (req, res)=>{
 })
   
 app.post('/in/orden', (req, res)=>{
+    resultIn = []
+
     var nodo1 = new Nodo(`${req.body.elements[0].nodo1}`)
     var nodo2 = new Nodo(`${req.body.elements[1].nodo2}`)
     var nodo3 = new Nodo(`${req.body.elements[2].nodo3}`)
@@ -32,7 +34,7 @@ app.post('/in/orden', (req, res)=>{
 })
 
 app.post('/post/orden', (req, res)=>{
-
+    resultPost = []
     console.log(req.body.elements[0].nodo1)
 
     var nodo1 = new Nodo(`${req.body.elements[0].nodo1}`)
