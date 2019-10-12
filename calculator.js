@@ -34,7 +34,7 @@ app.post('/in/orden', (req, res)=>{
 })
 
 app.post('/post/orden', (req, res)=>{
-    resultPost.c = []
+    resultPost = []
     console.log(req.body.elements[0].nodo1)
 
     var nodo1 = new Nodo(`${req.body.elements[0].nodo1}`)
