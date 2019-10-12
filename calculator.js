@@ -89,7 +89,7 @@ function postOrden(node){
     if( node == undefined ){
         return
     } 
-    resultPost = []
+    //resultPost = []
     //console.log('busc', result)
     postOrden( node.izq );
     postOrden( node.der );
