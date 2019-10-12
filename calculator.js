@@ -32,6 +32,9 @@ app.post('/in/orden', (req, res)=>{
 })
 
 app.post('/post/orden', (req, res)=>{
+
+    console.log(req.body.elements[0].nodo1)
+
     var nodo1 = new Nodo(`${req.body.elements[0].nodo1}`)
     var nodo2 = new Nodo(`${req.body.elements[1].nodo2}`)
     var nodo3 = new Nodo(`${req.body.elements[2].nodo3}`)
@@ -44,7 +47,7 @@ app.post('/post/orden', (req, res)=>{
     res.send({ response : resultPost   })
 })
 
-
+  
 
 function Nodo (val, izq, der  ){
     this.val = val;
